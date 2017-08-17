@@ -1,0 +1,64 @@
+{% load staticfiles %} <!--load css or static files-->
+
+<html>
+  <div id="wrapper">
+    <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Sedgwick+Ave+Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/testsalon.css' %}">
+
+
+        <title>A. Salon</title>
+    </head>
+    <div id="header">
+    <div class="page-header">
+        <h1><a href="/">A. Salon</a><span style="color:#660022;cursor:pointer;" onclick="openNav()"> &#9778;</span></h1>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">About</a>
+          <a href="#">Selections</a>
+          <a href="#">Food</a>
+          <a href="#">Contact</a>
+        </div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+    </div>
+  </div> <!--</header>-->
+
+    <div id="body">
+    <!--<body>-->
+      <div class="content container">
+          <div class="row">
+              <div class="col-md-8">
+              {% block content %}
+              {% endblock %}
+              </div>
+          </div>
+      </div>
+
+    <!--</body>-->
+
+    <div id="footer">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <a href="/"><i class="fa fa-instagram w3-hover-opacity"></a></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <p style="color:#ffffff">&copy; copyright 2017 by <a href="https://www.talithagrace.com/" style="color:#ffffff">talitha-grace</a>. all rights reserved</p>
+      <!--<p class="w3-medium">Web development by <a href="https://www.talithagrace.com/" target="_blank" class="w3-hover-text-green">talitha-grace</a></p>-->
+  </div>
+
+</div>
