@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'appointments',
+    'smart_selects',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 DEBUG = False
-
+JQUERY_URL = True
+USE_DJANGO_JQUERY = True
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 try:

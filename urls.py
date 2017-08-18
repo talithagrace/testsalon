@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from home import home_views
-from appointments import appointments_views
+#from appointments import appointments_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^chaining/', include('smart_selects.urls')),
     url(r'', include('home.urls')),
-    url(r'', include('appointments.urls')),
+#    url(r'', include('appointments.urls')),
 ]
