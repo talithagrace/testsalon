@@ -8,9 +8,11 @@
       {{ form.as_p }}
       <button type="submit" class="save btn btn-default">Submit</button>
   </form>
-  {% for availability in availabilitys %}
+  <div class="availability-list">
+  {% for availability in queryset %}
     <h2>{{ availability }}</h2>
   {% endfor %}
+</div>
 </div>
 
 {% endblock %}

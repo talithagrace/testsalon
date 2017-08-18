@@ -14,8 +14,8 @@ def availability(request):
             availability.save()
             queryset = Availability.objects.all().order_by('week_commencing', 'week_day')
             context = {
-                "queryset": queryset,
-                "form" : form #pass the form in the context
+                'queryset': queryset,
+                'form': form #pass the form in the context
             }
             return render(request, 'appointments/availability.html', context)
     else:

@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'appointments',
-    'smart_selects',
 ]
 
 MIDDLEWARE = [

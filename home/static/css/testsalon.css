@@ -150,3 +150,9 @@ span{
     /*position:relative;*/
 
 }
+
+.availability-list{
+    background-color: #ffffff;
+    opacity: 0.8;
+    width: 400px;
+}
