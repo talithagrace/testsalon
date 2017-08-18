@@ -121,9 +121,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 DEBUG = False
-JQUERY_URL = True
-USE_DJANGO_JQUERY = True
-#SECRET_KEY = os.environ['SECRET_KEY']
+
+SECRET_KEY = os.environ['SECRET_KEY']
 
 try:
     from .local_settings import *
