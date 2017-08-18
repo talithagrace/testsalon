@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from appointments.models import HairAppointment
+from appointments.models import Availability, HairAppointment
 from django.utils import timezone
 from .forms import SelectAvailabilityForm, CreateAppointmentForm
 from django.contrib.auth.forms import UserCreationForm
@@ -12,7 +12,12 @@ def availability(request):
             availability = form.save(commit=False)
             availability.user = request.user
             availability.save()
-            return render(request, 'appointments/availability.html', {'form': form})
+            queryset = Availability.objects.all().order_by('week_commencing', 'week_day')
+            context = {
+                "queryset": queryset,
+                "form" : form #pass the form in the context
+            }
+            return render(request, 'appointments/availability.html', context)
     else:
         form = SelectAvailabilityForm()
     return render(request, 'appointments/availability.html', {'form': form})
