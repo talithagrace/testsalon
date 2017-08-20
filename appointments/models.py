@@ -2,6 +2,10 @@ from django.db import models
 from django.utils import timezone
 from django.core.validators import RegexValidator
 
+#add model for hair styles, including field for price starting from
+#this needs to appear on the same page as the availability form
+#need the booking form to also appear on the front page, use javascript to jump to sections with scroll
+
 # Create your models here.
 DAY1 = "Monday"
 DAY2 = "Tuesday"
@@ -23,6 +27,18 @@ TIME9 = "17:00"
 TIME10 = "18:00"
 TIME11 = "19:00"
 TIME12 = "20:00"
+
+class Services(models.Model):
+    styles = models.CharField(max_length=30, blank=False, null=True, unique=True)
+    price = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='price starts from (£)')
+
+    def add(self):
+        self.save()
+
+    def __str__(self):
+        return '%s %s' % (self.styles, self.price)
+        #currency = '£'
+        #return '%s %s %s' % (self.styles, currency.replace(" ",""), self.price)
 
 class Day(models.Model):
     DAY_CHOICES = (
@@ -76,7 +92,8 @@ class HairAppointment(models.Model):
     email = models.EmailField(blank=False, null=True)
     #timeslot = models.ForeignKey(Availability, on_delete=models.CASCADE, default="", unique=True)
     timeslot = models.OneToOneField(Availability, on_delete=models.CASCADE) #onetoone means this slot will only be available once
-    style = models.CharField(max_length=200)
+    #style = models.CharField(max_length=200)
+    style = models.ForeignKey(Services, on_delete=models.CASCADE)
 
     def add(self):
         self.save()

@@ -1,10 +1,15 @@
 from django import forms
 from django.forms import widgets
-from .models import Day, Availability, HairAppointment
+from .models import Day, Availability, HairAppointment, Services
 from django.core.exceptions import NON_FIELD_ERRORS, ValidationError
 
 class DateInput(forms.DateInput):
     input_type = 'date'
+
+class SelectServiceForm(forms.ModelForm):
+    class Meta:
+        model = Services
+        fields = ('styles', 'price',)
 
 class SelectDaysForm(forms.ModelForm):
     class Meta:

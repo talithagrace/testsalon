@@ -2,16 +2,15 @@
 {% load staticfiles %}
 
 {% block content %}
-<div id="body">
   <div id="body">
     <form method="POST" class="availability-form" style="color:#818181">{% csrf_token %}
-      <h1 style="color:#ffffff">Select Availability</h1>
+      <h1 style="color:#ffffff">Create list of services</h1>
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Submit</button>
     </form>
     <div class="availability-list">
-    {% for availability in queryset %}
-      <h2>{{ availability }}</h2>
+    {% for services in queryset %}
+      <h2>{{ services }}</h2>
     {% endfor %}
   </div>
   </div>
