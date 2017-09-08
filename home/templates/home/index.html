@@ -6,6 +6,21 @@
 <!--<link rel="stylesheet" href="{% static 'css/home.css' %}">-->
 
 {% block content %}
+<div id="body">
+
+<div class="availability-list">
+  {% if user.is_superuser %}
+  <a href="{% url 'services' %}" class="top-menu"><span class="glyphicon glyphicon-plus" style="color:#ffffff"></span></a>
+  {% endif %}
+{% for service in services %}
+
+<h2>{% if user.is_superuser %}<a class="btn btn-default" style="padding:0px 0px 5px 5px; background-color:#000000; opacity:0.5" href="{% url 'service_remove' pk=service.pk %}"><span class="glyphicon glyphicon-remove" style="font-size:20px; color:#ffffff; text-align:center; opacity:1"></span>{% endif %}</a>  {{ service.styles }}   £{{ service.price }}</h2>
+{% endfor %}
+</div>
+</div>
+
+
+
 
 {% endblock %}
 </html>

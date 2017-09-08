@@ -48,9 +48,6 @@ def services(request):
         form = SelectServiceForm()
     return render(request, 'appointments/services.html', {'form': form})
 
-def services_list(request):
-    services = Services.objects.all().order_by('price')
-    return render(request, 'home/index.html', {'services': services})
 
 def availability(request):
     if request.method == "POST":

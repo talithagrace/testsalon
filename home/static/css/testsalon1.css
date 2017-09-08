@@ -154,7 +154,26 @@ span{
 }
 
 .availability-list{
-    background-color: #ffffff;
-    opacity: 0.8;
+    /*background-color: #21262b;*/
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+    opacity: 0.9;
     width: 400px;
+    float: left;
+    /*position: relative;*/
+}
+
+.btn{
+
+}
+.btn-default{
+
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.login tr{
+  color: #ffffff;
+  /*font-family: 'Sedgwick Ave Display', cursive;*/
+  font-size: 20px;
 }
