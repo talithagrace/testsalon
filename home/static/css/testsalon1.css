@@ -1,3 +1,18 @@
+#page1{
+  height: 1000px;
+  background-image: url(images/ricky_background2.jpg);
+  background-position: 10% 40%;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	/*background-size: 100% 180%;*/
+	background-size: cover; /*this mean the image automatically resizes for the browser*/
+}
+
+#page2{
+  height: 1000px;
+  color: #000000;
+}
+
 #wrapper{
   min-height: 100%;
 	position: relative;
@@ -72,6 +87,10 @@ p {
     text-decoration: none;
     /*float: right;*/
     margin-right: 30px;
+}
+.page-header h2 {
+    font-size: 20pt;
+    color: #ffffff;
 }
 
 .sidenav {

@@ -73,7 +73,9 @@ def booking(request):
             appointment = form.save(commit=False)
             appointment.user = request.user
             appointment.save()
+            #return render(request, 'appointments/booking.html', {'form': form})
             return render(request, 'appointments/booking.html', {'form': form})
     else:
         form = CreateAppointmentForm()
+    #return render(request, 'appointments/booking.html', {'form': form})
     return render(request, 'appointments/booking.html', {'form': form})
