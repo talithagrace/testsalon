@@ -5,19 +5,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Sedgwick+Ave+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bungee|Kreon|Philosopher|Yatra+One" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{% static 'css/testsalon1.css' %}">
+<link rel="stylesheet" href="{% static 'css/testsalon2.css' %}">
 
 
-    <title>A. Salon</title>
+    <title>Smoddy Sharp</title>
 </head>
 
 
 <div id="page1">
   <div id="header">
   <div class="page-header">
-      <h1><a href="/">A. Salon</a></h1>
-      <h2><a href="#booking">Book Appointment</a></h2>
+      <h1><a href="/">Smoddy Sharp</a></h1>
+      <h2><a href="#booking">Services</a></h2>
       <!--<div id="nav">
            <ul>
                <li><a href="#index">About</a></li>
@@ -29,6 +31,22 @@
   </div>
   </div> <!--</header>-->
   <a id="index" class="smooth"></a>
+  <!--<div class="availability-list">
+  {% for service in services %}
+
+  <h2> {{ service.styles }}   £{{ service.price }}</h2>
+  {% endfor %}
+
+</div>-->
+</div> <!--page1-->
+
+<div id="page2">
+<a id="booking" class="smooth"></a>
+<!--  <form method="POST" class="booking-form" style="color:#818181">{% csrf_token %}
+    <h1 style="color:#000000">Make an appointment</h1>
+      {{ form.as_p }}
+      <button type="submit" class="save btn btn-default">Submit</button>
+  </form>-->
   <div class="availability-list">
   {% for service in services %}
 
@@ -36,19 +54,18 @@
   {% endfor %}
 
 </div>
-</div> <!--page1-->
-
-<div id="page2">
-<a id="booking" class="smooth"></a>
-  <form method="POST" class="booking-form" style="color:#818181">{% csrf_token %}
-    <h1 style="color:#000000">Make an appointment</h1>
-      {{ form.as_p }}
-      <button type="submit" class="save btn btn-default">Submit</button>
-  </form>
 
 </div> <!--page2-->
 
-<!--<div id="page3">
+<div id="page3">
+  <a id="location" class="smooth"></a>
+  <a href="https://www.google.co.uk/maps/place/Forest+Hill,+London"><img src="{% static 'css/images/map.jpg' %}" style="max-width:100%; max-height:100%; box-shadow:10px 10px 5px grey;" /></a>
+<div class="address-box">
+  <p>Address info goes here</p>
+</div> <!--address-box-->
+</div> <!--page3-->
+
+<!--<div id="page4">
   <a id="contact" class="smooth"></a>
     Contact page content goes here.
 </div>-->

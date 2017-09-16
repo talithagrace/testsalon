@@ -1,6 +1,16 @@
+/*
+font-family: 'Philosopher', sans-serif;
+font-family: 'Kreon', serif;
+font-family: 'Bungee', cursive;
+font-family: 'Yatra One', cursive;
+*/
+
 #page1{
   height: 1000px;
-  background-image: url(images/ricky_background2.jpg);
+  /*background-image: url(images/ricky_background2.jpg);
+  background-image: url(images/salon_chairs2.jpg);
+  background-image: url(images/suit.jpg);*/
+  background-image: url(images/barbershop.jpg);
   background-position: 10% 40%;
 	background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,12 +21,19 @@
 #page2{
   height: 500px;
   color: #000000;
-  background-image: url(images/ricky_background3.jpg);
+  background-image: url(images/shave.jpg);
   background-position: 10% 40%;
 	background-repeat: no-repeat;
   background-attachment: fixed;
 	/*background-size: 100% 180%;*/
 	background-size: cover; /*this mean the image automatically resizes for the browser*/
+}
+
+#page3{
+  height: 500px;
+  color: #000000;
+  background-color: #ffffff;
+
 }
 
 #wrapper{
@@ -63,13 +80,15 @@
 }
 
 h1, h2, h3, h4 {
-    /*font-family: 'Indie Flower', cursive;*/
-    font-family: 'Sedgwick Ave Display', cursive;
+    /*font-family: 'Indie Flower', cursive;
+    font-family: 'Sedgwick Ave Display', cursive;*/
+    font-family: 'Philosopher', sans-serif;
 
 }
 
 p {
-  font-family: 'Indie Flower', cursive;
+  /*font-family: 'Indie Flower', cursive;*/
+  font-family: 'Kreon', serif;
 
 }
 
@@ -92,6 +111,7 @@ p {
     font-size: 90pt;
     text-decoration: none;
     /*float: right;*/
+    margin-top: 200px;
     margin-right: 30px;
 }
 .page-header h2 {
@@ -185,8 +205,14 @@ span{
     padding: 10px 10px 10px 10px;
     opacity: 0.9;
     width: 400px;
-    float: left;
-    /*position: relative;*/
+    float: right;
+    /*position: center;*/
+}
+
+.address-box{
+  float: right;
+  margin-right: 100px;
+  margin-top: 20px;
 }
 
 .btn{
