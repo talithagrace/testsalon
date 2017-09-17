@@ -19,14 +19,15 @@
   <div id="header">
   <div class="page-header">
       <h1><a href="/">Smoddy Sharp</a></h1>
-      <h2><a href="#booking">Services</a></h2>
-      <!--<div id="nav">
-           <ul>
-               <li><a href="#index">About</a></li>
-               <li><a href="#booking">Booking</a></li>
-               <li><a href="#contact"></a></li>
+      <!--<h2><a href="#booking">Services</a></h2>-->
+      <div id="nav">
+           <ul style="font-weight: bolder">
+               <li><h2><a href="#booking">Services</a></h2></li>
+               <li><h2><a href="/">Appointments</a></h2></li>
+               <li><h2><a href="#location">Location</a></h2></li>
+               <li><h2><a href="#location">Contact</a></h2></li>
            </ul>
-      </div>-->
+      </div>
 
   </div>
   </div> <!--</header>-->
@@ -47,11 +48,36 @@
       {{ form.as_p }}
       <button type="submit" class="save btn btn-default">Submit</button>
   </form>-->
+  <div class="photo-grid">
+    <a href="/">
+      <figure>
+        <img src="{% static 'css/images/barber.jpg' %}" style="max-height:100%; max-width:100%" alt="">
+      </figure>
+    </a>
+    <a href="/">
+      <figure>
+        <img src="{% static 'css/images/shave.jpg' %}" style="max-height:100%; max-width:100%" alt="">
+      </figure>
+    </a>
+    <a href="/">
+      <figure>
+        <img src="{% static 'css/images/salon_chairs.jpg' %}" style="max-height:100%; max-width:100%" alt="">
+      </figure>
+
+    </a>
+    <a href="/">
+      <figure>
+        <img src="{% static 'css/images/nails.jpg' %}" style="max-height:100%; max-width:100%" alt="">
+      </figure>
+    </a>
+  </div> <!--photo-grid-->
   <div class="availability-list">
-  {% for service in services %}
+  <!--{% for service in services %}
 
   <h2> {{ service.styles }}   £{{ service.price }}</h2>
-  {% endfor %}
+  {% endfor %}-->
+
+  <h2>List of services and prices here</h2>
 
 </div>
 
@@ -59,9 +85,12 @@
 
 <div id="page3">
   <a id="location" class="smooth"></a>
+  <div class="map">
   <a href="https://www.google.co.uk/maps/place/Forest+Hill,+London"><img src="{% static 'css/images/map.jpg' %}" style="max-width:100%; max-height:100%; box-shadow:10px 10px 5px grey;" /></a>
+</div> <!--map-->
+
 <div class="address-box">
-  <p>Address info goes here</p>
+  <h2>Address info goes here</h2>
 </div> <!--address-box-->
 </div> <!--page3-->
 
