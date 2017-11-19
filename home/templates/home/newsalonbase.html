@@ -11,19 +11,19 @@
 <link rel="stylesheet" href="{% static 'css/testsalon2.css' %}">
 
 
-    <title>Smoddy Sharp</title>
+    <title>A. Salon</title>
 </head>
 
 
 <div id="page1">
   <div id="header">
   <div class="page-header">
-      <h1><a href="/">Smoddy Sharp</a></h1>
+      <h1><a href="/">A. Salon</a></h1>
       <!--<h2><a href="#booking">Services</a></h2>-->
       <div id="nav">
            <ul style="font-weight: bolder">
                <li><h2><a href="#booking">Services</a></h2></li>
-               <li><h2><a href="/">Appointments</a></h2></li>
+               <li><h2><a href="{% url 'booking' %}">Appointments</a></h2></li>
                <li><h2><a href="#location">Location</a></h2></li>
                <li><h2><a href="#location">Contact</a></h2></li>
            </ul>
@@ -72,12 +72,12 @@
     </a>
   </div> <!--photo-grid-->
   <div class="availability-list">
-  <!--{% for service in services %}
+  {% for service in services %}
 
   <h2> {{ service.styles }}   £{{ service.price }}</h2>
-  {% endfor %}-->
+  {% endfor %}
 
-  <h2>List of services and prices here</h2>
+<!--<h2>List of services and prices here</h2>-->
 
 </div>
 
@@ -86,7 +86,7 @@
 <div id="page3">
   <a id="location" class="smooth"></a>
   <div class="map">
-  <a href="https://www.google.co.uk/maps/place/Forest+Hill,+London"><img src="{% static 'css/images/map.jpg' %}" style="max-width:100%; max-height:100%; box-shadow:10px 10px 5px grey;" /></a>
+  <a href="https://www.google.co.uk/maps/place/Forest+Hill,+London"><img src="{% static 'css/images/map.jpg' %}" style="max-width:75%; max-height:75%; box-shadow:10px 10px 5px grey;" /></a>
 </div> <!--map-->
 
 <div class="address-box">

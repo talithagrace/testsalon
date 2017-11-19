@@ -123,6 +123,10 @@ ALLOWED_HOSTS = ['*']
 DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
+#BRAINTREE_PRODUCTION = False  # We'll need this later to switch between the sandbox and live account
+#BRAINTREE_MERCHANT_ID = os.environ['BRAINTREE_MERCHANT_ID']
+#BRAINTREE_PUBLIC_KEY = os.environ['BRAINTREE_PUBLIC_KEY']
+#BRAINTREE_PRIVATE_KEY = os.environ['BRAINTREE_PRIVATE_KEY']
 
 try:
     from .local_settings import *
