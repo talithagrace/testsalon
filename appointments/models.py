@@ -86,7 +86,7 @@ class Availability(models.Model):
         return '%s %s %s' % (self.week_commencing, self.week_day, self.time)
 
 class HairAppointment(models.Model):
-    user = models.ForeignKey('auth.User')
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
     phone_number = models.CharField(verbose_name='phone', max_length=15, validators=[phone_regex], blank=False, null=True) #validators need to be in a list hence[]
     email = models.EmailField(blank=False, null=True)
